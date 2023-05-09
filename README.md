@@ -1,2 +1,2 @@
-# javascript
- Curso de JavaScript
+# JAVASCRIPT
+ Curso de Javascript
