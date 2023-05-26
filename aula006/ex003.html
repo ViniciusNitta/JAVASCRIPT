@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Script</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font: normal bold 1.1em Verdana ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo !!</h1> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis laudantium error a, adipisci alias ea tempore, animi dolores repellendus nobis suscipit possimus nemo, pariatur eligendi nesciunt maiores quibusdam fugiat.</p>
+
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        //É necessário a conversão pois o comando prompt armazena os dados como string
+
+        var n2 = parseFloat(prompt('Digite outro número: ')) 
+        // Number e window são opcionais nessas declarações
+
+        var n3 = Number(prompt('Digite mais um número'))
+        //Quando não é especificado qual o tipo de número, pode ser usado Number que irá definir sozinho se é Float ou Int
+
+        /* 
+        var n4 = n3.toString()
+        var n4 = String(n3)
+        Conversão de number para string 
+        */
+
+        var s = n1 + n2 + n3
+
+        alert ( `A soma de ${n1}, ${n2} e ${n3} é igual a ${String(s)} `)
+    </script>
+</body>
+</html>
