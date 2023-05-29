@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(131, 126, 126);
+            font: normal normal 1em Arial;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 name="titulo">Trabalhando com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p class="p2">Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <p id="p3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, perspiciatis omnis reprehenderit fugit consequuntur a deleniti laboriosam ducimus cupiditate, ex quaerat obcaecati magni necessitatibus reiciendis aut hic aliquam. Necessitatibus, doloribus!</p>
+    <div id="link">Clique aqui</div>
+
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]
+        //Selecionando através da TAG 
+        var p2 = document.getElementsByClassName('p2')[0]
+        //Selecionando através da CLASS
+        var d = document.getElementById('link')
+        //Selecionando através do ID
+        var t1 = document.getElementsByName('titulo')[0]
+        //Selecionando através de NAME
+        var p3 = document.querySelector('p#p3')
+        //Selecionando através do QUERYSELECTOR, no caso através do ID 
+        
+
+
+        p1.style.color = 'green'
+        p2.style.color = 'yellow'
+        d.style.color = 'blue'
+        d.innerText = 'ALOO SAMBA' //Altera o texto do HTML
+        t1.style.color = 'white'
+        p3.style.color = 'red'
+
+
+    </script>
+</body>
+</html>
