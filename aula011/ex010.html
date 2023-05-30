@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em JS</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro <input type="number" name="vel" id="idvel"> KM/H
+    <input type="button" value="Verificar" onclick="calc()">
+    <div id="result"></div>
+
+<script>
+    function calc() {       
+        var cxvel = document.getElementById('idvel')
+        var res = document.getElementById('result')
+        var vel = Number(cxvel.value)
+
+        if (vel > 60){
+        res.innerHTML = `<p>A sua velocidade é de <strong>${vel}KM/H</strong>, está acima da permitida. Você foi multado!!</p>`
+        }else {
+        res.innerHTML = `<p>A sua velocidade é de <strong>${vel}KM/H</strong>, está dentro do permitido. Tenha uma boa viagem!!</p>`
+        }
+        res.innerHTML += 'Dirija com cuidado e sempre use o cinto de segurança.'
+    }
+
+
+
+    </script>
+    
+</body>
+</html>
