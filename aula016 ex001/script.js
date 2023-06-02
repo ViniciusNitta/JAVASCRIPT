@@ -9,7 +9,6 @@ function add(){
     }else {
         var num = Number(cxnum.value)
         var ver = valores.indexOf(num)
-        res.innerHTML = ''
 
         if (ver == -1){
             valores.push(num)
@@ -17,11 +16,13 @@ function add(){
             item.value = `res${num}`
             tabres.appendChild(item)
             item.text = `O valor ${num} foi adicionado`
+            res.innerHTML = ''
         }else {
             alert('O valor já foi inserido')
         }
     }
 }
+
 function finalizar(){
     if (valores == ''){
         alert('Adicione um valor para continuar')
@@ -31,16 +32,16 @@ function finalizar(){
         })
 
         var soma = 0 
-        for(var ind = 0; ind < valores.length; ind++){
-            soma += valores[ind]
+        for(var pos in valores){
+            soma += valores[pos]
         }
 
         media = soma / valores.length
 
-        res.innerHTML = (`<p>No total foram adicionados ${valores.length} números </p>`)
-        res.innerHTML += (`<p> O maior dos  valores foi o ${valores[valores.length - 1]}</p>`)
-        res.innerHTML += (`<p> O menor dos  valores foi o ${valores[0]}</p>`)
-        res.innerHTML += (`<p> A soma dos  valores foi de ${soma}</p>`)
-        res.innerHTML += (`<p> A média dos  valores foi de ${media}</p>`)
+        res.innerHTML = (`<p>No total foram adicionados ${valores.length} números. </p>`)
+        res.innerHTML += (`<p> O maior dos  valores foi o ${valores[valores.length - 1]}.</p>`)
+        res.innerHTML += (`<p> O menor dos  valores foi o ${valores[0]}.</p>`)
+        res.innerHTML += (`<p> A soma dos  valores foi de ${soma}.</p>`)
+        res.innerHTML += (`<p> A média dos  valores foi de ${media}.</p>`)
     }
 }
